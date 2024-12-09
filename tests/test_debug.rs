@@ -1,4 +1,8 @@
-use rust_btree::{btree, print_as_tree, BTreeNode, NodePtr};
+use rust_btree::{
+    btree,
+    node::node::{BTreeNode, NodePtr},
+    util::print_as_tree,
+};
 
 #[test]
 fn test_debug_print() {

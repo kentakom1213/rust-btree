@@ -2,9 +2,17 @@
 
 #![allow(non_snake_case)]
 
-use rust_btree::{btree, insert_multi, print_as_tree, remove, BTreeNode, NodePtr, RemoveKey};
 use rand::Rng;
 use rstest::rstest;
+use rust_btree::{
+    btree,
+    node::{
+        insert::insert_multi,
+        node::{BTreeNode, NodePtr},
+        remove::{remove, RemoveKey},
+    },
+    util::print_as_tree,
+};
 use rustc_hash::FxHashMap;
 
 const COUNT: u32 = 200000;

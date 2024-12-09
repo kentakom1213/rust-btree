@@ -76,7 +76,11 @@ where
 
 #[cfg(test)]
 mod test {
-    use crate::{btree, print_as_tree, BTreeNode, NodePtr};
+    use crate::{
+        btree,
+        node::node::{BTreeNode, NodePtr},
+        util::print_as_tree,
+    };
 
     #[test]
     fn test_nth_key() {

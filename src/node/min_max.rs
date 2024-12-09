@@ -50,8 +50,9 @@ where
 
 #[cfg(test)]
 mod test {
+    use crate::{btree, node::node::BTreeNode, util::print_as_tree};
+
     use super::*;
-    use crate::{btree, print_as_tree, BTreeNode};
 
     #[test]
     fn test_leftmost_leaf() {

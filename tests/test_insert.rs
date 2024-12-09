@@ -1,6 +1,13 @@
-use rust_btree::{insert_multi, print_as_tree, BTreeNode, NodePtr, NodeUtil};
 use rand::Rng;
 use rstest::rstest;
+use rust_btree::{
+    node::{
+        insert::insert_multi,
+        node::{BTreeNode, NodePtr},
+        util::NodeUtil,
+    },
+    util::print_as_tree,
+};
 use rustc_hash::FxHashMap;
 
 /// 空きのあるノードに挿入

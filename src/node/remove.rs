@@ -363,7 +363,8 @@ where
 
 #[cfg(test)]
 mod test {
-    use crate::{btree, print_as_tree, BTreeNode, NodePtr};
+
+    use crate::{btree, util::print_as_tree};
 
     use super::*;
 

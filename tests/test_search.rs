@@ -1,6 +1,13 @@
 //! 検索のテスト
 
-use rust_btree::{get, get_mut, insert_multi, print_as_tree, NodePtr};
+use rust_btree::{
+    node::{
+        insert::insert_multi,
+        node::NodePtr,
+        search::{get, get_mut},
+    },
+    util::print_as_tree,
+};
 
 #[test]
 fn test_get() {

@@ -47,7 +47,10 @@ where
 
 #[cfg(test)]
 mod test {
-    use crate::{btree, BTreeNode, NodePtr};
+    use crate::{
+        btree,
+        node::node::{BTreeNode, NodePtr},
+    };
 
     #[test]
     fn test_serialize_node_1() {
