@@ -1,10 +1,6 @@
 #![allow(non_snake_case)]
 #![feature(generic_const_exprs)]
 
-mod map;
-mod node;
-mod util;
-
-pub use node::*;
-pub use util::*;
-pub use map::MyBTreeMap;
+pub mod collections;
+pub mod node;
+pub mod util;

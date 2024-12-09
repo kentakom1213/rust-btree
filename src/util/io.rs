@@ -2,7 +2,7 @@
 
 use serde::{ser::SerializeStruct, Serialize};
 
-use crate::BTreeNode;
+use crate::node::node::BTreeNode;
 
 impl<const D: usize, K, V> Serialize for BTreeNode<D, K, V>
 where

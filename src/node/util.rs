@@ -1,6 +1,6 @@
 //! ノードのユーティリティ
 
-use crate::NodePtr;
+use crate::node::node::NodePtr;
 
 pub trait NodeUtil<const D: usize, K, V>
 where

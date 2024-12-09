@@ -1,4 +1,4 @@
-use rust_btree::MyBTreeMap;
+use rust_btree::collections::map::MyBTreeMap;
 
 fn main() {
     let mut map: MyBTreeMap<3, _, _> = MyBTreeMap::new();

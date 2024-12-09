@@ -1,6 +1,9 @@
 //! B木からデータを削除する
 
-use crate::{BTreeNode, NodePtr, NodeUtil};
+use crate::node::{
+    node::{BTreeNode, NodePtr},
+    util::NodeUtil,
+};
 
 /// 削除するキーを指定するための列挙型
 #[derive(Debug)]

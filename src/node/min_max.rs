@@ -1,6 +1,6 @@
 //! 最小値，最大値の検索
 
-use crate::{NodePtr, NodeUtil};
+use crate::node::{node::NodePtr, util::NodeUtil};
 
 /// 最も左の葉ノードを探索する
 fn leftmost_leaf<const D: usize, K, V>(node: &NodePtr<D, K, V>) -> &NodePtr<D, K, V>

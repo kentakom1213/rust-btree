@@ -1,6 +1,6 @@
 //! 検索を行う
 
-use super::NodePtr;
+use crate::node::node::NodePtr;
 
 /// B木のノードからキーを検索する．
 ///

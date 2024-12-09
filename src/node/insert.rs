@@ -1,4 +1,7 @@
-use crate::{BTreeNode, NodePtr, NodeUtil};
+use crate::node::{
+    node::{BTreeNode, NodePtr},
+    util::NodeUtil,
+};
 
 /// B木に値を挿入する．すでに挿入されている場合でも重複して挿入する．
 /// - `root`：挿入対象の木のルート
