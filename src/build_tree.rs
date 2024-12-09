@@ -1,7 +1,7 @@
 /// btreeを作成する
-/// - `btree! {}`
+/// - `build_tree! {}`
 #[macro_export]
-macro_rules! btree {
+macro_rules! build_tree {
     ( keys: $keys:expr , vals: $vals:expr , size: $size:expr $(,)* ) => {
         Some(Box::new(BTreeNode {
             keys: $keys,

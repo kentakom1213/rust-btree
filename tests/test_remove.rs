@@ -5,7 +5,7 @@
 use rand::Rng;
 use rstest::rstest;
 use rust_btree::{
-    btree,
+    build_tree,
     node::{
         insert::insert_multi,
         node::{BTreeNode, NodePtr},
@@ -103,21 +103,21 @@ fn test_remove_decremental_D3() {
 
 #[test]
 fn test_hand_1() {
-    let mut tree: Option<NodePtr<2, i32, ()>> = btree! {
+    let mut tree: Option<NodePtr<2, i32, ()>> = build_tree! {
         keys: [Some(31), Some(67), None],
         vals: [Some(()), Some(()), None],
         children: [
-            btree! {
+            build_tree! {
                 keys: [Some(0), Some(4), Some(11)],
                 vals: [Some(()), Some(()), Some(())],
                 size: 3
             },
-            btree! {
+            build_tree! {
                 keys: [Some(35), Some(37), Some(55)],
                 vals: [Some(()), Some(()), Some(())],
                 size: 3
             },
-            btree! {
+            build_tree! {
                 keys: [Some(81), Some(90), None],
                 vals: [Some(()), Some(()), None],
                 size: 2
@@ -138,20 +138,20 @@ fn test_hand_1() {
 
 #[test]
 fn test_hand_2() {
-    let mut tree: Option<NodePtr<2, u32, ()>> = btree! {
+    let mut tree: Option<NodePtr<2, u32, ()>> = build_tree! {
         keys: [Some(11), None, None],
         vals: [Some(()), None, None],
         children: [
-            btree! {
+            build_tree! {
                 keys: [Some(8), None, None],
                 vals: [Some(()), None, None],
                 children: [
-                    btree! {
+                    build_tree! {
                         keys: [Some(4), Some(7), None],
                         vals: [Some(()), Some(()), None],
                         size: 2
                     },
-                    btree! {
+                    build_tree! {
                         keys: [Some(9), Some(10), None],
                         vals: [Some(()), Some(()), None],
                         size: 2
@@ -161,16 +161,16 @@ fn test_hand_2() {
                 ],
                 size: 1
             },
-            btree! {
+            build_tree! {
                 keys: [Some(18), None, None],
                 vals: [Some(()), None, None],
                 children: [
-                    btree! {
+                    build_tree! {
                         keys: [Some(14), Some(15), None],
                         vals: [Some(()), Some(()), None],
                         size: 2
                     },
-                    btree! {
+                    build_tree! {
                         keys: [Some(18), Some(20), Some(20)],
                         vals: [Some(()), Some(()), Some(())],
                         size: 3

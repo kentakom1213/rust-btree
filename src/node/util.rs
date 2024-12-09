@@ -77,14 +77,14 @@ where
 #[cfg(test)]
 mod test {
     use crate::{
-        btree,
+        build_tree,
         node::node::{BTreeNode, NodePtr},
         util::tree_debug::print_as_tree,
     };
 
     #[test]
     fn test_nth_key() {
-        let mut tree: Option<NodePtr<2, i32, &str>> = btree! {
+        let mut tree: Option<NodePtr<2, i32, &str>> = build_tree! {
             keys: [Some(0), Some(5), None],
             vals: [Some("hoge"), Some("fuga"), None],
             size: 2

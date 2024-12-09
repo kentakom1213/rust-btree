@@ -364,13 +364,13 @@ where
 #[cfg(test)]
 mod test {
 
-    use crate::{btree, util::tree_debug::print_as_tree};
+    use crate::{build_tree, util::tree_debug::print_as_tree};
 
     use super::*;
 
     #[test]
     fn test_remove_from_leaf() {
-        let mut tree: Option<NodePtr<4, char, i32>> = btree! {
+        let mut tree: Option<NodePtr<4, char, i32>> = build_tree! {
             keys: [Some('a'), Some('c'), Some('e'), Some('g'), Some('i'), Some('k'), None],
             vals: [Some(434), Some(112), Some(605), Some(705), Some(334), Some(963), None],
             size: 6
@@ -396,7 +396,7 @@ mod test {
 
     #[test]
     fn test_remove_min_max() {
-        let mut tree: Option<NodePtr<4, char, i32>> = btree! {
+        let mut tree: Option<NodePtr<4, char, i32>> = build_tree! {
             keys: [Some('a'), Some('c'), Some('e'), Some('g'), Some('i'), Some('k'), None],
             vals: [Some(434), Some(112), Some(605), Some(705), Some(334), Some(963), None],
             size: 6
@@ -422,26 +422,26 @@ mod test {
     }
 
     fn build_tree_1() -> Option<NodePtr<3, char, String>> {
-        btree! {
+        build_tree! {
             keys: [Some('b'), Some('e'), Some('g'), None, None],
             vals: [Some("Bob".to_string()), Some("Emily".to_string()), Some("Grace".to_string()), None, None],
             children: [
-                btree! {
+                build_tree! {
                     keys: [Some('a'), None, None, None, None],
                     vals: [Some("Alice".to_string()), None, None, None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some('c'), Some('d'), None, None, None],
                     vals: [Some("Charlie".to_string()), Some("David".to_string()), None, None, None],
                     size: 2,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some('f'), None, None, None, None],
                     vals: [Some("Frank".to_string()), None, None, None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some('h'), None, None, None, None],
                     vals: [Some("Helen".to_string()), None, None, None, None],
                     size: 1,
@@ -490,20 +490,20 @@ mod test {
     }
 
     fn build_tree_2() -> Option<NodePtr<2, char, String>> {
-        btree! {
+        build_tree! {
             keys: [Some('d'), None, None],
             vals: [Some("Doughnut".to_string()), None, None],
             children: [
-                btree! {
+                build_tree! {
                     keys: [Some('b'), None, None],
                     vals: [Some("Banana".to_string()), None, None],
                     children: [
-                        btree! {
+                        build_tree! {
                             keys: [Some('a'), None, None],
                             vals: [Some("Apple".to_string()), None, None],
                             size: 1,
                         },
-                        btree! {
+                        build_tree! {
                             keys: [Some('c'), None, None],
                             vals: [Some("Cherry".to_string()), None, None],
                             size: 1,
@@ -513,16 +513,16 @@ mod test {
                     ],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some('f'), None, None],
                     vals: [Some("Fruit".to_string()), None, None],
                     children: [
-                        btree! {
+                        build_tree! {
                             keys: [Some('e'), None, None],
                             vals: [Some("Eggplant".to_string()), None, None],
                             size: 1,
                         },
-                        btree! {
+                        build_tree! {
                             keys: [Some('g'), None, None],
                             vals: [Some("Grape".to_string()), None, None],
                             size: 1,

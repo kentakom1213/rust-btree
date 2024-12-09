@@ -50,32 +50,32 @@ where
 
 #[cfg(test)]
 mod test {
-    use crate::{btree, node::node::BTreeNode, util::tree_debug::print_as_tree};
+    use crate::{build_tree, node::node::BTreeNode, util::tree_debug::print_as_tree};
 
     use super::*;
 
     #[test]
     fn test_leftmost_leaf() {
-        let tree: Option<NodePtr<2, i32, &str>> = btree! {
+        let tree: Option<NodePtr<2, i32, &str>> = build_tree! {
             keys: [Some(1), Some(2), Some(3)],
             vals: [Some("a"), Some("b"), Some("c")],
             children: [
-                btree! {
+                build_tree! {
                     keys: [Some(0), None, None],
                     vals: [Some("x"), None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some(4), None, None],
                     vals: [Some("d"), None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some(5), None, None],
                     vals: [Some("e"), None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some(6), None, None],
                     vals: [Some("f"), None, None],
                     size: 1,
@@ -98,26 +98,26 @@ mod test {
 
     #[test]
     fn test_min_max() {
-        let tree: Option<NodePtr<2, i32, &str>> = btree! {
+        let tree: Option<NodePtr<2, i32, &str>> = build_tree! {
             keys: [Some(1), Some(2), Some(3)],
             vals: [Some("a"), Some("b"), Some("c")],
             children: [
-                btree! {
+                build_tree! {
                     keys: [Some(0), None, None],
                     vals: [Some("x"), None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some(4), None, None],
                     vals: [Some("d"), None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some(5), None, None],
                     vals: [Some("e"), None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some(6), None, None],
                     vals: [Some("f"), None, None],
                     size: 1,

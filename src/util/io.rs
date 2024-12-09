@@ -48,32 +48,32 @@ where
 #[cfg(test)]
 mod test {
     use crate::{
-        btree,
+        build_tree,
         node::node::{BTreeNode, NodePtr},
     };
 
     #[test]
     fn test_serialize_node_1() {
-        let tree: Option<NodePtr<3, char, &str>> = btree! {
+        let tree: Option<NodePtr<3, char, &str>> = build_tree! {
             keys: [Some('b'), Some('e'), Some('g'), None, None],
             vals: [Some("Bob"), Some("Emily"), Some("Grace"), None, None],
             children: [
-                btree! {
+                build_tree! {
                     keys: [Some('a'), None, None, None, None],
                     vals: [Some("Alice"), None, None, None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some('c'), Some('d'), None, None, None],
                     vals: [Some("Charlie"), Some("David"), None, None, None],
                     size: 2,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some('f'), None, None, None, None],
                     vals: [Some("Frank"), None, None, None, None],
                     size: 1,
                 },
-                btree! {
+                build_tree! {
                     keys: [Some('h'), None, None, None, None],
                     vals: [Some("Helen"), None, None, None, None],
                     size: 1,
@@ -91,20 +91,20 @@ mod test {
 
     #[test]
     fn test_serialize_node_2() {
-        let tree: Option<NodePtr<2, u32, ()>> = btree! {
+        let tree: Option<NodePtr<2, u32, ()>> = build_tree! {
             keys: [Some(11), None, None],
             vals: [Some(()), None, None],
             children: [
-                btree! {
+                build_tree! {
                     keys: [Some(8), None, None],
                     vals: [Some(()), None, None],
                     children: [
-                        btree! {
+                        build_tree! {
                             keys: [Some(4), Some(7), None],
                             vals: [Some(()), Some(()), None],
                             size: 2
                         },
-                        btree! {
+                        build_tree! {
                             keys: [Some(9), Some(10), None],
                             vals: [Some(()), Some(()), None],
                             size: 2
@@ -114,16 +114,16 @@ mod test {
                     ],
                     size: 1
                 },
-                btree! {
+                build_tree! {
                     keys: [Some(18), None, None],
                     vals: [Some(()), None, None],
                     children: [
-                        btree! {
+                        build_tree! {
                             keys: [Some(14), Some(15), None],
                             vals: [Some(()), Some(()), None],
                             size: 2
                         },
-                        btree! {
+                        build_tree! {
                             keys: [Some(18), Some(20), Some(20)],
                             vals: [Some(()), Some(()), Some(())],
                             size: 3
