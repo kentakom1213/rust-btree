@@ -1,4 +1,4 @@
-use btree_simple::{insert_multi, print_as_tree, BTreeNode, NodePtr, NodeUtil};
+use rust_btree::{insert_multi, print_as_tree, BTreeNode, NodePtr, NodeUtil};
 use rand::Rng;
 use rstest::rstest;
 use rustc_hash::FxHashMap;

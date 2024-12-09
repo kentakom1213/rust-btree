@@ -2,7 +2,7 @@
 
 #![allow(non_snake_case)]
 
-use btree_simple::{btree, insert_multi, print_as_tree, remove, BTreeNode, NodePtr, RemoveKey};
+use rust_btree::{btree, insert_multi, print_as_tree, remove, BTreeNode, NodePtr, RemoveKey};
 use rand::Rng;
 use rstest::rstest;
 use rustc_hash::FxHashMap;

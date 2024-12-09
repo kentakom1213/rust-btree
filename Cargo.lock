@@ -18,18 +18,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ace50bade8e6234aa140d9a2f552bbee1db4d353f69b8217bc503490fc1a9f26"
 
 [[package]]
-name = "btree_simple"
-version = "0.1.0"
-dependencies = [
- "colored",
- "rand",
- "rstest",
- "rustc-hash",
- "serde",
- "serde_json",
-]
-
-[[package]]
 name = "byteorder"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -350,6 +338,18 @@ dependencies = [
  "rustc_version",
  "syn",
  "unicode-ident",
+]
+
+[[package]]
+name = "rust_btree"
+version = "0.1.0"
+dependencies = [
+ "colored",
+ "rand",
+ "rstest",
+ "rustc-hash",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
