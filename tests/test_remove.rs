@@ -11,7 +11,7 @@ use rust_btree::{
         node::{BTreeNode, NodePtr},
         remove::{remove, RemoveKey},
     },
-    util::print_as_tree,
+    util::tree_debug::print_as_tree,
 };
 use rustc_hash::FxHashMap;
 

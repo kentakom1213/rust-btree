@@ -9,7 +9,7 @@ use crate::{
         remove::{remove, RemoveKey},
         search::{get, get_mut},
     },
-    util::print_as_tree,
+    util::tree_debug::print_as_tree,
 };
 
 /// B木による連想配列

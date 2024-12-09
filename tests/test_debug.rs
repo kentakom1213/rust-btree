@@ -1,7 +1,7 @@
 use rust_btree::{
     btree,
     node::node::{BTreeNode, NodePtr},
-    util::print_as_tree,
+    util::tree_debug::print_as_tree,
 };
 
 #[test]

@@ -50,7 +50,7 @@ where
 
 #[cfg(test)]
 mod test {
-    use crate::{btree, node::node::BTreeNode, util::print_as_tree};
+    use crate::{btree, node::node::BTreeNode, util::tree_debug::print_as_tree};
 
     use super::*;
 
