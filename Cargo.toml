@@ -5,7 +5,6 @@ edition = "2021"
 
 [dependencies]
 serde = "1.0.215"
-colored = "2.1.0"
 serde_json = "1.0.133"
 
 [dev-dependencies]

@@ -1,7 +1,5 @@
 //! デバッグ用関数群
 
-use colored::Colorize;
-
 use crate::node::node::{BTreeNode, NodePtr};
 use std::fmt::Debug;
 
@@ -50,12 +48,12 @@ where
 {
     eprintln!(
         "{}",
-        "┌─ B-Tree ──────────────────────────────────────────────".blue()
+        "┌─ B-Tree ──────────────────────────────────────────────"
     );
     dbg_inner(root, &mut vec![], NULL);
     eprintln!(
         "{}",
-        "└───────────────────────────────────────────────────────".blue()
+        "└───────────────────────────────────────────────────────"
     );
 }
 
@@ -143,7 +141,7 @@ fn print_node<const D: usize, K: Debug, V: Debug>(
     // キー，値を表示
     eprintln!(
         "{} {} Node {{ key: {:?}, val: {:?} }}",
-        "│".blue(),
+        "│",
         fill,
         keys[i].as_ref().unwrap(),
         vals[i].as_ref().unwrap(),
