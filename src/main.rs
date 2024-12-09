@@ -7,7 +7,7 @@ fn main() {
     for i in 1..=20 {
         map.insert(i, format!("{i:0>4}"));
 
-        println!("> Insert {i}");
+        eprintln!("> Insert {i}");
         map.print_as_tree();
     }
 
@@ -15,7 +15,7 @@ fn main() {
     for i in (1..=20).step_by(2) {
         map.remove(&i);
 
-        println!("> Remove {i}");
+        eprintln!("> Remove {i}");
         map.print_as_tree();
     }
 }
