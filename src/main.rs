@@ -1,3 +1,5 @@
+#![feature(generic_const_exprs)]
+
 use rust_btree::collections::map::MyBTreeMap;
 
 fn main() {

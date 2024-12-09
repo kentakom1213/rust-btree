@@ -46,12 +46,12 @@ pub fn print_as_tree<const D: usize, K: Ord + Debug, V: Debug>(root: &Option<Nod
 where
     [(); 2 * D - 1]:,
 {
-    eprintln!(
+    println!(
         "{}",
         "┌─ B-Tree ──────────────────────────────────────────────"
     );
     dbg_inner(root, &mut vec![], NULL);
-    eprintln!(
+    println!(
         "{}",
         "└───────────────────────────────────────────────────────"
     );
@@ -139,7 +139,7 @@ fn print_node<const D: usize, K: Debug, V: Debug>(
     };
 
     // キー，値を表示
-    eprintln!(
+    println!(
         "{} {} Node {{ key: {:?}, val: {:?} }}",
         "│",
         fill,
