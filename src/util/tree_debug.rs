@@ -1,5 +1,7 @@
 //! デバッグ用関数群
 
+#![allow(non_snake_case)]
+
 use crate::node::node::{BTreeNode, NodePtr};
 use std::fmt::Debug;
 
